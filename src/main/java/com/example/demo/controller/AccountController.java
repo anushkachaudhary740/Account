@@ -18,13 +18,13 @@ public class AccountController {
 @PutMapping("/put/{lastDigitOfAccountNumber}")
 public Account deposited(@RequestBody Account account, @PathVariable("lastDigitOfAccountNumber") Integer lastDigitOfAccountNumber){
     //System.out.println(account.getAmount());
-    return this.accountService.getDeposite(account,account.getAmount());
+    return this.accountService.getDeposite(account,account.getDepositAmount());
 
 }
     @PutMapping("/delete/{lastDigitOfAccountNumber}")
     public Account withDraw(@RequestBody Account account, @PathVariable("lastDigitOfAccountNumber") Integer lastDigitOfAccountNumber){
         //System.out.println(account.getAmount());
-        return this.accountService.getWithDraw(account,account.getAmount());
+        return this.accountService.getWithDraw(account,account.getWithdrawAmount());
 
     }
 }

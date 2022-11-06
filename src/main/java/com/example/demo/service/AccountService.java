@@ -14,33 +14,20 @@ public class AccountService {
     private static List<Account> account=new ArrayList<>();
 
     static {
-        account.add(new Account(11, "Anushka", 10.00));
-//        account.add(new Account(12, "Akshita", 20000.00));
-//        account.add(new Account(13, "Anuj", 30000.00));
-//        account.add(new Account(14, "Shivam", 40000.00));
-//        account.add(new Account(15, "Shubham", 50000.00));
+        account.add(new Account(11, "Anushka", 10.00,00.00,00.00));
     }
 
     public List<Account> totalAmount() {
         return account;
 
     }
-
-
-//    public Account getDeposite(Account account, double amount) {
-//        account.setAmount(account.getAmount()+amount);
-//        return account;
-//    }
-//
-    public Account getDeposite(Account account, double amount) {
-        System.out.println(amount);
-        Double money=0.0+amount;
+    public Account getDeposite(Account account,double depositAmount) {
+        Double money=0.0+depositAmount;
         account.setAmount(account.getAmount()+money);
         return account;
     }
-    public Account getWithDraw(Account account, double amount) {
-        System.out.println(amount);
-        Double money=0.0+amount;
+    public Account getWithDraw(Account account, double withdraw) {
+        Double money=0.0+withdraw;
         account.setAmount(account.getAmount()-money);
         return account;
     }
