@@ -38,5 +38,11 @@ public class AccountService {
         account.setAmount(account.getAmount()+money);
         return account;
     }
+    public Account getWithDraw(Account account, double amount) {
+        System.out.println(amount);
+        Double money=0.0+amount;
+        account.setAmount(account.getAmount()-money);
+        return account;
+    }
 
 }

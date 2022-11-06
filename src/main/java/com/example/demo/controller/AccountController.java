@@ -21,5 +21,10 @@ public Account deposited(@RequestBody Account account, @PathVariable("lastDigitO
     return this.accountService.getDeposite(account,account.getAmount());
 
 }
+    @PutMapping("/delete/{lastDigitOfAccountNumber}")
+    public Account withDraw(@RequestBody Account account, @PathVariable("lastDigitOfAccountNumber") Integer lastDigitOfAccountNumber){
+        //System.out.println(account.getAmount());
+        return this.accountService.getWithDraw(account,account.getAmount());
 
+    }
 }
