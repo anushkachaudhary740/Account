@@ -1,9 +1,13 @@
-package com.example.demo.model;
+package com.assignment.banksystem.model;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Component
+@Entity
 public class Account {
+    @Id
+    @Column(name="account_number")
     private Integer lastDigitOfAccountNumber;
     private String name;
     private double amount;
