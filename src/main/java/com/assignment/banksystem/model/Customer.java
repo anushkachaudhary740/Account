@@ -1,20 +1,21 @@
 package com.assignment.banksystem.model;
+
 import lombok.*;
+
 import javax.persistence.*;
+
 @Entity
-@Table(name="account_table")
+@Table(name = "customer_Table")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class AccountDetails {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="account_number")
-    private Integer lastDigitOfAccountNumber;
+    private Integer customerId;
     private String customerName;
-    private double amount;
-    private double depositAmount;
-    private double withdrawAmount;
+    private String MobileNumber;
+    private String customerEmail;
 }

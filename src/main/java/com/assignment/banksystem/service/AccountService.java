@@ -1,12 +1,12 @@
 package com.assignment.banksystem.service;
 
-import com.assignment.banksystem.model.AccountDetails;
+import com.assignment.banksystem.model.BankAccount;
 
 import java.util.List;
 
 public interface AccountService {
-    List<AccountDetails> totalAmount();
-    AccountDetails addDetails(AccountDetails account);
-    AccountDetails getDeposit(AccountDetails account, Double depositeAmount);
-    AccountDetails getWithDraw(AccountDetails account, Double withdraw);
+    List<BankAccount> totalAmount();
+    BankAccount addDetails(BankAccount account);
+    BankAccount getDeposit(BankAccount account, Double depositeAmount);
+    BankAccount getWithDraw(BankAccount account, Double withdraw);
 }
